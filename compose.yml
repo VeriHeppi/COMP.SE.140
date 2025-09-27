@@ -23,8 +23,8 @@ services:
   storage:
     build: ./storage
     image: e1/storage
-    ports:
-      - "5000:5000"          
+    expose:
+      - "9090"          
     volumes:
       - storage_data:/data
     networks:
