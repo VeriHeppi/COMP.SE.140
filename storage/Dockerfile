@@ -23,6 +23,7 @@ EXPOSE 5000
 
 ENV FLASK_APP=app.py
 ENV FLASK_ENV=production
+ENV DATA_DIR=/data
 
 RUN adduser --disabled-password --gecos '' appuser
 RUN chown -R appuser:appuser /app
