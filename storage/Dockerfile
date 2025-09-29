@@ -17,7 +17,7 @@ COPY . .
 
 # Expose the port Flask runs on
 
-EXPOSE 5000
+EXPOSE 9090
 
 # ENV variables
 
@@ -25,8 +25,4 @@ ENV FLASK_APP=app.py
 ENV FLASK_ENV=production
 ENV DATA_DIR=/data
 
-RUN adduser --disabled-password --gecos '' appuser
-RUN chown -R appuser:appuser /app
-USER appuser
-
-CMD ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port=5000"]
+CMD ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port=9090"]
