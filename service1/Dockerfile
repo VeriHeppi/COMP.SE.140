@@ -21,7 +21,7 @@ EXPOSE 8199
 
 # ENV variables
 
-ENV FLASK_APP=app.py
+ENV FLASK_APP=service.py
 ENV FLASK_ENV=production
 
 RUN adduser --disabled-password --gecos '' appuser
